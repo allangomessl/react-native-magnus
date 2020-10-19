@@ -1,7 +1,7 @@
 {
   "name": "@paintbox/magnus",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Utility-First React Native UI Framework",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
