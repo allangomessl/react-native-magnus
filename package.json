@@ -1,6 +1,7 @@
 {
-  "name": "react-native-magnus",
-  "version": "1.0.44",
+  "name": "@paintbox/magnus",
+  "private": false,
+  "version": "1.0.0",
   "description": "A Utility-First React Native UI Framework",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -14,6 +15,9 @@
     "ios",
     "react-native-magnus.podspec"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "jest",
     "typescript": "tsc --noEmit",
