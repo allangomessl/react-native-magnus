@@ -146,7 +146,7 @@ Select.defaultProps = {
   bg: 'white',
   rounded: 'none',
   flexDir: 'column',
-  keyExtractor: (item, index) => `${index}`,
+  keyExtractor: (_, index) => `${index}`,
 };
 
 export { Option, Select };

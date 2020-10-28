@@ -9,7 +9,7 @@ import { DivProps } from './div.type';
 import { getStyle } from './div.style';
 import { ThemeContext } from '../../theme';
 
-const Div: React.FunctionComponent<DivProps> = (props: DivProps) => {
+const Div = <T extends React.FC>(props: DivProps<T>) => {
   const {
     bg,
     h,
@@ -25,6 +25,7 @@ const Div: React.FunctionComponent<DivProps> = (props: DivProps) => {
     pt,
     pb,
     pl,
+    as,
     minH,
     minW,
     maxW,
@@ -83,10 +84,12 @@ const Div: React.FunctionComponent<DivProps> = (props: DivProps) => {
     );
   }
 
+  const Cmp = as || RNView;
+
   return (
-    <RNView style={computedStyle.div} {...rest}>
+    <Cmp style={computedStyle.div} {...rest}>
       {children}
-    </RNView>
+    </Cmp>
   );
 };
 

@@ -10,7 +10,7 @@ import {
   ShadowPropsType,
 } from '../../theme';
 
-export interface DivProps
+export interface AnimatedProps
   extends RNViewProps,
     BorderPropsType,
     SpacingPropsType,

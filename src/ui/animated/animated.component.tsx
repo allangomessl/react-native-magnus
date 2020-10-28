@@ -3,14 +3,14 @@ import { useContext } from 'react';
 import { ImageBackground as RNImageBackground } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 
-import { DivProps } from './animated.type';
+import { AnimatedProps } from './animated.type';
 import { ThemeContext } from '../../theme';
 import { getStyle } from './animated.style';
 import { registerAnimations } from './animated.service';
 
 registerAnimations();
 
-const Animated: React.FunctionComponent<DivProps> = (props: DivProps) => {
+const Animated: React.FC<AnimatedProps> = (props: AnimatedProps) => {
   const {
     h,
     w,

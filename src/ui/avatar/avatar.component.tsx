@@ -6,7 +6,7 @@ import { getStyle } from './avatar.style';
 import { ThemeContext } from '../../theme';
 import { AvatarProps } from './avatar.type';
 
-const Avatar: React.FunctionComponent<AvatarProps> = (props) => {
+const Avatar: React.FC<AvatarProps> = (props) => {
   const {
     bg,
     m,

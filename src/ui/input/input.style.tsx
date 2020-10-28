@@ -33,13 +33,17 @@ export const getStyle = (theme: any, props: any, state: any) => {
     opacity: props.opacity,
     backgroundColor: getThemeProperty(theme.colors, props.bg, 'white'),
     ...createFlexStyles(props),
-    ...createBorderWidthStyles(props),
-    ...createShadowStyles(props, theme),
     ...createPositionStyle(props),
     ...createSpacingStyles(props, theme.spacing),
     ...createBorderColorStyles(props, theme.colors),
     ...createBorderRadiusStyles(props, theme.borderRadius),
   };
+
+  if (!props.clean) {
+    Object.assign(computedStyle.container, createBorderWidthStyles(props));
+    Object.assign(computedStyle.container, createShadowStyles(props, theme));
+    computedStyle.container.backgroundColor = 'transparent';
+  }
 
   if (state.isFocussed) {
     computedStyle.container = {
